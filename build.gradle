@@ -28,8 +28,7 @@ test {
 
     testLogging {
         events "PASSED", "FAILED", "SKIPPED"
-        exceptionFormat = "Full"
-        showStandardStreams = true
+        exceptionFormat "full"
     }
 
     tasks.register("webTest", Test) {
