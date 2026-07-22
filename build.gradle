@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.33.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:6.3.2'
+
+    testImplementation 'io.cucumber:cucumber-java:7.34.4'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.34.4'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.12.2'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.12.2'
+
+    testImplementation 'io.rest-assured:rest-assured:5.5.1'
+    testImplementation 'io.rest-assured:json-schema-validator:5.5.1'
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat = "Full"
+        showStandardStreams = true
+    }
+
+    tasks.register("webTest", Test) {
+        description = "Run all Web UI Cucumber Tests"
+        group = "verification"
+
+        useJUnitPlatform()
+
+        systemProperty "cucumber.filter.tags", "@web"
+
+        testLogging {
+            events "PASSED", "FAILED", "SKIPPED"
+        }
+    }
+
+    tasks.register("apiTest", Test) {
+        description = "Run all API Cucumber Tests"
+        group = "verification"
+
+        useJUnitPlatform()
+
+        systemProperty "cucumber.filter.tags", "@api"
+
+        testLogging {
+            events "PASSED", "FAILED", "SKIPPED"
+        }
+    }
+}
