@@ -34,20 +34,27 @@ Feature: User API
     And User berhasil dihapus
 
   @negative
-  Scenario: Get User dengan ID tidak valid
+  Scenario: Get User dengan format ID tidak valid
     When User mengirim request Get User dengan ID "invalid-id"
+    Then Status code harus 400
+    And Response menampilkan pesan error
+
+  @negative
+  Scenario: Get User dengan ID tidak ditemukan
+    When User mengirim request Get User dengan ID "5f9d88a1c7e4b6d2a8f1c3e5"
     Then Status code harus 404
     And Response menampilkan pesan error
 
   @negative
   Scenario: Update User dengan ID tidak valid
-    When User mengirim request Update User dengan ID "invalid-id"
-    Then Status code harus 404
+    When User mengirim request Update User dengan ID "61ab2c3d4e5f678901234567"
+#   gunakan status code 400 karena field body tidak sesuai
+    Then Status code harus 400
     And Response menampilkan pesan error
 
   @negative
   Scenario: Delete User dengan ID tidak valid
-    When User mengirim request Delete User dengan ID "invalid-id"
+    When User mengirim request Delete User dengan ID "7abcdef0123456789abcdef0"
     Then Status code harus 404
     And Response menampilkan pesan error
 

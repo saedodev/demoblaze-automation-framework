@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.saedodev.runner.ApiTestRunner" tests="8" skipped="0" failures="4" errors="0" timestamp="2026-07-23T13:11:15" hostname="KUDANIL" time="5.728">
+  <properties/>
+  <testcase name="Get list of tags successfully" classname="com.saedodev.runner.ApiTestRunner" time="0.127">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;User mengirim request Get List Tags&quot;)&#10;public void user_mengirim_request_get_list_tags() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;List tag tidak kosong&quot;)&#10;public void list_tag_tidak_kosong() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;User mengirim request Get List Tags&quot;)
+public void user_mengirim_request_get_list_tags() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;List tag tidak kosong&quot;)
+public void list_tag_tidak_kosong() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.User mengirim request Get List Tags(classpath:features/api/tag.feature:9)
+</failure>
+  </testcase>
+  <testcase name="Validate total tags information" classname="com.saedodev.runner.ApiTestRunner" time="0.009">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;User mengirim request Get List Tags&quot;)&#10;public void user_mengirim_request_get_list_tags() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Total tag lebih dari {int}&quot;)&#10;public void total_tag_lebih_dari(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;User mengirim request Get List Tags&quot;)
+public void user_mengirim_request_get_list_tags() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Total tag lebih dari {int}&quot;)
+public void total_tag_lebih_dari(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.User mengirim request Get List Tags(classpath:features/api/tag.feature:16)
+</failure>
+  </testcase>
+  <testcase name="Validate limit and page information" classname="com.saedodev.runner.ApiTestRunner" time="0.018">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 2 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;User mengirim request Get List Tags&quot;)&#10;public void user_mengirim_request_get_list_tags() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Limit lebih dari {int}&quot;)&#10;public void limit_lebih_dari(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Page sama dengan {int}&quot;)&#10;public void page_sama_dengan(Integer int1) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;User mengirim request Get List Tags&quot;)
+public void user_mengirim_request_get_list_tags() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Limit lebih dari {int}&quot;)
+public void limit_lebih_dari(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Page sama dengan {int}&quot;)
+public void page_sama_dengan(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.User mengirim request Get List Tags(classpath:features/api/tag.feature:22)
+</failure>
+  </testcase>
+  <testcase name="Validate first tag is not empty" classname="com.saedodev.runner.ApiTestRunner" time="0.007">
+    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;User mengirim request Get List Tags&quot;)&#10;public void user_mengirim_request_get_list_tags() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Tag pertama tidak kosong&quot;)&#10;public void tag_pertama_tidak_kosong() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'User mengirim request Get List Tags' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;User mengirim request Get List Tags&quot;)
+public void user_mengirim_request_get_list_tags() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Tag pertama tidak kosong&quot;)
+public void tag_pertama_tidak_kosong() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.User mengirim request Get List Tags(classpath:features/api/tag.feature:29)
+</failure>
+  </testcase>
+  <testcase name="Create User" classname="com.saedodev.runner.ApiTestRunner" time="2.589"/>
+  <testcase name="Get User by ID" classname="com.saedodev.runner.ApiTestRunner" time="1.053"/>
+  <testcase name="Update User" classname="com.saedodev.runner.ApiTestRunner" time="1.034"/>
+  <testcase name="Delete User" classname="com.saedodev.runner.ApiTestRunner" time="0.881"/>
+  <system-out><![CDATA[
+@api @tag @positive
+?[1mScenario:?[22m Get list of tags successfully      ?[90m# classpath:features/api/tag.feature:8?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m                 ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+  ?[33m■?[39m ?[33m?[1mWhen ?[22mUser mengirim request Get List Tags?[39m
+  ?[36m↷?[39m ?[36m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mResponse sesuai tag schema?[39m           ?[90m# com.saedodev.api.stepdef.CommonStepDef.valid_tagschema()?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mList tag tidak kosong?[39m
+===== API Test Finished =====
+
+@api @tag @positive
+?[1mScenario:?[22m Validate total tags information    ?[90m# classpath:features/api/tag.feature:15?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m                 ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+  ?[33m■?[39m ?[33m?[1mWhen ?[22mUser mengirim request Get List Tags?[39m
+  ?[36m↷?[39m ?[36m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mTotal tag lebih dari 0?[39m
+===== API Test Finished =====
+
+@api @tag @positive
+?[1mScenario:?[22m Validate limit and page information ?[90m# classpath:features/api/tag.feature:21?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m                  ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+  ?[33m■?[39m ?[33m?[1mWhen ?[22mUser mengirim request Get List Tags?[39m
+  ?[36m↷?[39m ?[36m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m                ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mLimit lebih dari 0?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mPage sama dengan 0?[39m
+===== API Test Finished =====
+
+@api @tag @positive
+?[1mScenario:?[22m Validate first tag is not empty    ?[90m# classpath:features/api/tag.feature:28?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m                 ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+  ?[33m■?[39m ?[33m?[1mWhen ?[22mUser mengirim request Get List Tags?[39m
+  ?[36m↷?[39m ?[36m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[36m↷?[39m ?[36m?[1mAnd ?[22mTag pertama tidak kosong?[39m
+===== API Test Finished =====
+
+@api @user @positive
+?[1mScenario:?[22m Create User                      ?[90m# classpath:features/api/user.feature:8?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser mengirim request Create User?[39m ?[90m# com.saedodev.api.stepdef.UserStepDef.create_user()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m             ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mResponse sesuai user schema?[39m        ?[90m# com.saedodev.api.stepdef.CommonStepDef.valid_userschema()?[39m
+===== API Test Finished =====
+
+@api @user @positive
+?[1mScenario:?[22m Get User by ID                               ?[90m# classpath:features/api/user.feature:14?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m                           ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+Status Code : 200
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser telah dibuat?[39m                            ?[90m# com.saedodev.api.stepdef.UserStepDef.user_created()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser mengirim request Get User berdasarkan ID?[39m ?[90m# com.saedodev.api.stepdef.UserStepDef.get_user()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m                         ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mData user berhasil ditampilkan?[39m                 ?[90m# com.saedodev.api.stepdef.UserStepDef.verify_user_data()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mResponse sesuai user schema?[39m                    ?[90m# com.saedodev.api.stepdef.CommonStepDef.valid_userschema()?[39m
+===== API Test Finished =====
+
+@api @user @positive
+?[1mScenario:?[22m Update User                      ?[90m# classpath:features/api/user.feature:22?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+Status Code : 200
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser telah dibuat?[39m                ?[90m# com.saedodev.api.stepdef.UserStepDef.user_created()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser mengirim request Update User?[39m ?[90m# com.saedodev.api.stepdef.UserStepDef.update_user()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m             ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mData user berhasil diperbarui?[39m      ?[90m# com.saedodev.api.stepdef.UserStepDef.verify_update_data()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mResponse sesuai user schema?[39m        ?[90m# com.saedodev.api.stepdef.CommonStepDef.valid_userschema()?[39m
+===== API Test Finished =====
+
+@api @user @positive
+?[1mScenario:?[22m Delete User                      ?[90m# classpath:features/api/user.feature:30?[39m
+===== API Test Started =====
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mDummy API tersedia?[39m               ?[90m# com.saedodev.api.stepdef.CommonStepDef.dummy_api()?[39m
+Status Code : 200
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser telah dibuat?[39m                ?[90m# com.saedodev.api.stepdef.UserStepDef.user_created()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser mengirim request Delete User?[39m ?[90m# com.saedodev.api.stepdef.UserStepDef.delete_user()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mStatus code harus ?[1m200?[22m?[39m             ?[90m# com.saedodev.api.stepdef.CommonStepDef.status_code(int)?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser berhasil dihapus?[39m              ?[90m# com.saedodev.api.stepdef.UserStepDef.verify_delete_user()?[39m
+===== API Test Finished =====
+]]></system-out>
+  <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 23, 2026 9:11:21 PM org.junit.platform.launcher.core.DiscoveryIssueNotifier logIssues
+WARNING: TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features/api' should not be used to select features in a package. Use the package selector with 'features.api' instead
+]]></system-err>
+</testsuite>
