@@ -59,4 +59,10 @@ public class HomePage {
 
         wait.waitUntilClickable(product).click();
     }
+
+    public boolean isProductDisplayed(String productName) {
+        By product = By.xpath("//td[text()='" + productName + "']");
+
+        return wait.waitUntilVisible(product).isDisplayed();
+    }
 }

@@ -16,12 +16,13 @@ public class WebHooks {
         DriverFactory.getDriver().get(ConfigReader.getBaseUrl());
     }
 
-    @Before(value = "@login", order = 1)
+    @Before(value = "@login or @product or @cart or @checkout", order = 1)
     public void prepareLoginUser() {
 
         System.out.println("REGISTER USER");
 
         UserHelper.ensureRegistered();
+        UserHelper.login();
     }
 
     @After

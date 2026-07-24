@@ -2,7 +2,7 @@
 Feature: Product
 
   Background:
-    Given User login sebagai "testuser"
+    Given User berada di halaman utama Demoblaze
 
   Scenario: Melihat detail produk
     When User memilih salah satu produk
