@@ -69,9 +69,9 @@ public class CartStepDef {
     @Then("Produk berhasil dihapus")
     public void isProductRemoved() {
 
-        assertFalse(cartPage.isProductRemoved("Iphone 6 32gb"));
-        assertFalse(cartPage.isProductRemoved("Sony vaio i5"));
-        assertFalse(cartPage.isProductRemoved("Apple monitor 24"));
+        assertTrue(cartPage.isProductRemoved("Iphone 6 32gb"));
+        assertTrue(cartPage.isProductRemoved("Sony vaio i5"));
+        assertTrue(cartPage.isProductRemoved("Apple monitor 24"));
 
     }
 }

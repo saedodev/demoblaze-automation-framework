@@ -12,8 +12,8 @@ Feature: Checkout
 
   Scenario: Checkout tanpa mengisi nama
     When User melakukan checkout tanpa mengisi nama
-    Then Muncul pesan error
+    Then Muncul pesan error validasi
 
   Scenario: Checkout tanpa mengisi kartu kredit
     When User melakukan checkout tanpa mengisi kartu kredit
-    Then Muncul pesan error
+    Then Muncul pesan error validasi

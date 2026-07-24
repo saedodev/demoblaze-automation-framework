@@ -8,4 +8,6 @@ public class TestData {
     public static final String password = "rin321123";
 
     public static boolean isRegistered = false;
+    public static String name = "Moriyama Rin";
+    public static String creditCard = "9148123";
 }

@@ -22,14 +22,20 @@ public class WaitUtil {
     }
 
     public WebElement waitUntilVisible(By locator) {
+
         return wait.until(
-                ExpectedConditions.visibilityOfElementLocated(locator)
+                ExpectedConditions.refreshed(
+                        ExpectedConditions.visibilityOfElementLocated(locator)
+                )
         );
     }
 
     public WebElement waitUntilClickable(By locator) {
+
         return wait.until(
-                ExpectedConditions.elementToBeClickable(locator)
+                ExpectedConditions.refreshed(
+                        ExpectedConditions.elementToBeClickable(locator)
+                )
         );
     }
 

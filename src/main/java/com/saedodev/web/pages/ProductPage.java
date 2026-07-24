@@ -26,6 +26,8 @@ public class ProductPage {
     private final By home =
             By.xpath("//a[text()='Home ']");
 
+    private final By productContainer = By.id("tbodyid");
+
     public void openFirstProduct() {
         wait.waitUntilClickable(firstProduct).click();
     }
@@ -53,34 +55,43 @@ public class ProductPage {
     }
 
     public void backToHome() {
+
         wait.waitUntilClickable(home).click();
+
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfElementLocated(
+                        By.cssSelector(".card-title a")));
     }
 
     public void selectProduct(String category, String productName) {
 
         HomePage homePage = new HomePage();
-        switch (category.toLowerCase()) {
 
-            case "phone":
+        switch (category) {
+
+            case "Phone":
                 homePage.clickPhoneCategory();
                 break;
 
-            case "laptop":
+            case "Laptop":
                 homePage.clickLaptopCategory();
                 break;
 
-            case "monitor":
+            case "Monitor":
                 homePage.clickMonitorCategory();
                 break;
-
-            default:
-                throw new IllegalArgumentException(
-                        "Kategori tidak ditemukan : " + category
-                );
         }
 
         By product = By.xpath("//a[text()='" + productName + "']");
 
-        wait.waitUntilClickable(product).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        wait.until(ExpectedConditions.refreshed(
+                ExpectedConditions.visibilityOfElementLocated(product)));
+
+        wait.until(ExpectedConditions.refreshed(
+                ExpectedConditions.elementToBeClickable(product)));
+
+        driver.findElement(product).click();
     }
 }

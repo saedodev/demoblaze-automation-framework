@@ -21,8 +21,7 @@ public class CartPage {
 
         By product = By.xpath("//td[text()='" + productName + "']");
 
-        return !wait.waitUntilInvisible(product);
-
+        return wait.waitUntilInvisible(product);
     }
 
 
