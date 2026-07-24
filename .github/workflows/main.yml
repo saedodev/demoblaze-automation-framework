@@ -1,0 +1,49 @@
+name: Saucedemo Selenium Automation Test
+
+on:
+  push:
+    branches: ["main"]
+
+  pull_request:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout source code
+      - uses: actions/checkout@v4
+
+      # Setup Java
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      # Grant execute permission
+      - name: Grant Permission
+        run: chmod +x gradlew
+
+      # Run Automation Test
+      - name: Run Tests
+        run: ./gradlew clean test
+
+      # Upload Cucumber Report
+      - name: Upload Cucumber Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report
+          path: build/reports/cucumber/
+
+      # Upload Gradle Report
+      - name: Upload Gradle Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-test-report
+          path: build/reports/tests/test/
