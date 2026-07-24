@@ -32,16 +32,32 @@ test {
         events "PASSED", "FAILED", "SKIPPED"
         exceptionFormat "full"
     }
+}
 
-    tasks.register("apiTest", Test) {
-        useJUnitPlatform()
+tasks.register("apiTest", Test) {
 
-        systemProperty "cucumber.filter.tags", "@api"
+    useJUnitPlatform()
+
+    filter {
+        includeTestsMatching "com.saedodev.runner.ApiTestRunner"
     }
 
-    tasks.register("webTest", Test) {
-        useJUnitPlatform()
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat "full"
+    }
+}
 
-        systemProperty "cucumber.filter.tags", "@web"
+tasks.register("webTest", Test) {
+
+    useJUnitPlatform()
+
+    filter {
+        includeTestsMatching "com.saedodev.runner.WebTestRunner"
+    }
+
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat "full"
     }
 }

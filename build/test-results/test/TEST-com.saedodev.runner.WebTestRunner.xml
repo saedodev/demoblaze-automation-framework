@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.saedodev.runner.WebTestRunner" tests="18" skipped="0" failures="0" errors="0" timestamp="2026-07-24T14:06:33" hostname="KUDANIL" time="167.407">
+  <properties/>
+  <testcase name="Menghapus produk dari cart" classname="com.saedodev.runner.WebTestRunner" time="34.854"/>
+  <testcase name="Checkout berhasil" classname="com.saedodev.runner.WebTestRunner" time="18.461"/>
+  <testcase name="Checkout tanpa mengisi nama" classname="com.saedodev.runner.WebTestRunner" time="16.662"/>
+  <testcase name="Checkout tanpa mengisi kartu kredit" classname="com.saedodev.runner.WebTestRunner" time="18.436"/>
+  <testcase name="User berhasil login" classname="com.saedodev.runner.WebTestRunner" time="5.948"/>
+  <testcase name="Login menggunakan password yang salah" classname="com.saedodev.runner.WebTestRunner" time="6.696"/>
+  <testcase name="Login menggunakan username yang tidak terdaftar" classname="com.saedodev.runner.WebTestRunner" time="6.288"/>
+  <testcase name="Login tanpa username" classname="com.saedodev.runner.WebTestRunner" time="5.817"/>
+  <testcase name="Login tanpa password" classname="com.saedodev.runner.WebTestRunner" time="5.067"/>
+  <testcase name="Login tanpa username dan password" classname="com.saedodev.runner.WebTestRunner" time="5.597"/>
+  <testcase name="Melihat detail produk" classname="com.saedodev.runner.WebTestRunner" time="5.629"/>
+  <testcase name="Menambahkan satu produk ke cart" classname="com.saedodev.runner.WebTestRunner" time="6.711"/>
+  <testcase name="Menambahkan beberapa produk ke cart" classname="com.saedodev.runner.WebTestRunner" time="14.844"/>
+  <testcase name="User berhasil melakukan signup" classname="com.saedodev.runner.WebTestRunner" time="4.603"/>
+  <testcase name="Signup menggunakan username yang sudah terdaftar" classname="com.saedodev.runner.WebTestRunner" time="3.757"/>
+  <testcase name="Signup tanpa username" classname="com.saedodev.runner.WebTestRunner" time="2.517"/>
+  <testcase name="Signup tanpa password" classname="com.saedodev.runner.WebTestRunner" time="2.841"/>
+  <testcase name="Signup tanpa username dan password" classname="com.saedodev.runner.WebTestRunner" time="2.672"/>
+  <system-out><![CDATA[
+@web @cart
+?[1mScenario:?[22m Menghapus produk dari cart                 ?[90m# classpath:features/web/cart.feature:7?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+Registered User : rin1784901996719
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m     ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser menambahkan beberapa produk untuk cart?[39m ?[90m# com.saedodev.web.stepdef.CartStepDef.addAnotherProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mProduk tampil pada Cart?[39m                      ?[90m# com.saedodev.web.stepdef.CartStepDef.productAdded()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menghapus produk?[39m                        ?[90m# com.saedodev.web.stepdef.CartStepDef.removeFromCart()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mProduk berhasil dihapus?[39m                     ?[90m# com.saedodev.web.stepdef.CartStepDef.isProductRemoved()?[39m
+
+@web @checkout
+?[1mScenario:?[22m Checkout berhasil                          ?[90m# classpath:features/web/checkout.feature:9?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m     ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser menambahkan beberapa produk untuk cart?[39m ?[90m# com.saedodev.web.stepdef.CartStepDef.addAnotherProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mProduk tampil pada Cart?[39m                      ?[90m# com.saedodev.web.stepdef.CartStepDef.productAdded()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser melakukan checkout dengan data valid?[39m   ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.inputData()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mPesanan berhasil dibuat?[39m                     ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.successOrder()?[39m
+
+@web @checkout
+?[1mScenario:?[22m Checkout tanpa mengisi nama                ?[90m# classpath:features/web/checkout.feature:13?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m     ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser menambahkan beberapa produk untuk cart?[39m ?[90m# com.saedodev.web.stepdef.CartStepDef.addAnotherProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mProduk tampil pada Cart?[39m                      ?[90m# com.saedodev.web.stepdef.CartStepDef.productAdded()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser melakukan checkout tanpa mengisi nama?[39m  ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.blankName()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul pesan error validasi?[39m                 ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.validationError()?[39m
+
+@web @checkout
+?[1mScenario:?[22m Checkout tanpa mengisi kartu kredit               ?[90m# classpath:features/web/checkout.feature:17?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m            ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser menambahkan beberapa produk untuk cart?[39m        ?[90m# com.saedodev.web.stepdef.CartStepDef.addAnotherProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mProduk tampil pada Cart?[39m                             ?[90m# com.saedodev.web.stepdef.CartStepDef.productAdded()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser melakukan checkout tanpa mengisi kartu kredit?[39m ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.blankCreditCard()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul pesan error validasi?[39m                        ?[90m# com.saedodev.web.stepdef.CheckoutStepDef.validationError()?[39m
+
+@web @login @positive
+?[1mScenario:?[22m User berhasil login                      ?[90m# classpath:features/web/login.feature:8?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m   ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                  ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username yang valid?[39m           ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password yang valid?[39m           ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m                 ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mNama user ditampilkan pada navigation bar?[39m ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginSuccess()?[39m
+
+@web @login @negative
+?[1mScenario:?[22m Login menggunakan password yang salah  ?[90m# classpath:features/web/login.feature:16?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username yang valid?[39m         ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password yang salah?[39m         ?[90m# com.saedodev.web.stepdef.LoginStepDef.wrongPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m               ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Wrong password.?[39m            ?[90m# com.saedodev.web.stepdef.LoginStepDef.wrongPasswordAlert()?[39m
+
+@web @login @negative
+?[1mScenario:?[22m Login menggunakan username yang tidak terdaftar ?[90m# classpath:features/web/login.feature:24?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m          ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                         ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username yang tidak terdaftar?[39m        ?[90m# com.saedodev.web.stepdef.LoginStepDef.invalidUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password yang valid?[39m                  ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m                        ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert User does not exist.?[39m                ?[90m# com.saedodev.web.stepdef.LoginStepDef.userNotExistAlert()?[39m
+
+@web @login @negative
+?[1mScenario:?[22m Login tanpa username                                             ?[90m# classpath:features/web/login.feature:32?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m                           ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser login tanpa username?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password yang valid?[39m                                   ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m                                         ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password. di menu login?[39m ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankLoginAlert()?[39m
+
+@web @login @negative
+?[1mScenario:?[22m Login tanpa password                                             ?[90m# classpath:features/web/login.feature:40?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m                           ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username yang valid?[39m                                   ?[90m# com.saedodev.web.stepdef.LoginStepDef.inputValidUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser login tanpa password?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m                                         ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password. di menu login?[39m ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankLoginAlert()?[39m
+
+@web @login @negative
+?[1mScenario:?[22m Login tanpa username dan password                                ?[90m# classpath:features/web/login.feature:48?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m                           ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+URL      : https://www.demoblaze.com/
+TITLE    : STORE
+LOGIN2   : 1
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Log In?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.loginMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser login tanpa username?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser login tanpa password?[39m                                          ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Log In?[39m                                         ?[90m# com.saedodev.web.stepdef.LoginStepDef.clickLoginButton()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password. di menu login?[39m ?[90m# com.saedodev.web.stepdef.LoginStepDef.blankLoginAlert()?[39m
+
+@web @product
+?[1mScenario:?[22m Melihat detail produk                  ?[90m# classpath:features/web/product.feature:7?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser memilih salah satu produk?[39m          ?[90m# com.saedodev.web.stepdef.ProductStepDef.getProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mDetail produk berhasil ditampilkan?[39m      ?[90m# com.saedodev.web.stepdef.ProductStepDef.displayProduct()?[39m
+
+@web @product
+?[1mScenario:?[22m Menambahkan satu produk ke cart        ?[90m# classpath:features/web/product.feature:11?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser memilih salah satu produk?[39m          ?[90m# com.saedodev.web.stepdef.ProductStepDef.getProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Add to Cart?[39m          ?[90m# com.saedodev.web.stepdef.ProductStepDef.addToCart()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mProduk berhasil ditambahkan ke cart?[39m     ?[90m# com.saedodev.web.stepdef.ProductStepDef.alertAddCart()?[39m
+
+@web @product
+?[1mScenario:?[22m Menambahkan beberapa produk ke cart    ?[90m# classpath:features/web/product.feature:16?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+REGISTER USER
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser menambahkan beberapa produk?[39m        ?[90m# com.saedodev.web.stepdef.ProductStepDef.addAnotherProduct()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mSemua produk berhasil masuk ke cart?[39m     ?[90m# com.saedodev.web.stepdef.ProductStepDef.productAdded()?[39m
+
+@web @signup @positive
+?[1mScenario:?[22m User berhasil melakukan signup         ?[90m# classpath:features/web/signup.feature:8?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Sign Up?[39m               ?[90m# com.saedodev.web.stepdef.SignupStepDef.signupMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username baru?[39m               ?[90m# com.saedodev.web.stepdef.SignupStepDef.signUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password baru?[39m               ?[90m# com.saedodev.web.stepdef.SignupStepDef.signPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Sign Up?[39m              ?[90m# com.saedodev.web.stepdef.SignupStepDef.btnSignup()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Sign up successful.?[39m        ?[90m# com.saedodev.web.stepdef.SignupStepDef.alertSuccess()?[39m
+
+@web @signup @negative
+?[1mScenario:?[22m Signup menggunakan username yang sudah terdaftar ?[90m# classpath:features/web/signup.feature:16?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m           ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Sign Up?[39m                         ?[90m# com.saedodev.web.stepdef.SignupStepDef.signupMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username yang sudah terdaftar?[39m         ?[90m# com.saedodev.web.stepdef.SignupStepDef.existingUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password?[39m                              ?[90m# com.saedodev.web.stepdef.SignupStepDef.existedUsernamePassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Sign Up?[39m                        ?[90m# com.saedodev.web.stepdef.SignupStepDef.btnSignup()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert This user already exist.?[39m             ?[90m# com.saedodev.web.stepdef.SignupStepDef.alertExistUsername()?[39m
+
+@web @signup @negative
+?[1mScenario:?[22m Signup tanpa username                              ?[90m# classpath:features/web/signup.feature:24?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m             ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Sign Up?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.signupMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengosongkan username?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi password?[39m                                ?[90m# com.saedodev.web.stepdef.SignupStepDef.existedUsernamePassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Sign Up?[39m                          ?[90m# com.saedodev.web.stepdef.SignupStepDef.btnSignup()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password.?[39m ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankAlertUsername()?[39m
+
+@web @signup @negative
+?[1mScenario:?[22m Signup tanpa password                              ?[90m# classpath:features/web/signup.feature:32?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m             ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Sign Up?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.signupMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengisi username baru?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.signUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengosongkan password?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Sign Up?[39m                          ?[90m# com.saedodev.web.stepdef.SignupStepDef.btnSignup()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password.?[39m ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankAlertUsername()?[39m
+
+@web @signup @negative
+?[1mScenario:?[22m Signup tanpa username dan password                 ?[90m# classpath:features/web/signup.feature:40?[39m
+OPEN WEBSITE
+https://www.demoblaze.com
+  ?[32m✔?[39m ?[32m?[1mGiven ?[22mUser berada di halaman utama Demoblaze?[39m             ?[90m# com.saedodev.web.stepdef.CommonStepDef.userHomePage()?[39m
+  ?[32m✔?[39m ?[32m?[1mWhen ?[22mUser membuka menu Sign Up?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.signupMenu()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengosongkan username?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankUsername()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser mengosongkan password?[39m                           ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankPassword()?[39m
+  ?[32m✔?[39m ?[32m?[1mAnd ?[22mUser menekan tombol Sign Up?[39m                          ?[90m# com.saedodev.web.stepdef.SignupStepDef.btnSignup()?[39m
+  ?[32m✔?[39m ?[32m?[1mThen ?[22mMuncul alert Please fill out Username and Password.?[39m ?[90m# com.saedodev.web.stepdef.SignupStepDef.blankAlertUsername()?[39m
+]]></system-out>
+  <system-err><![CDATA[Jul 24, 2026 10:06:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:06:35 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:07:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:07:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:07:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:07:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:07:44 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:07:44 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:08 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:15 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:32 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:32 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:37 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:43 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:43 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:08:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:08:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:09:05 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:09:09 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:13 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:09:13 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:09:16 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 150
+Jul 24, 2026 10:09:18 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+WARNING: Unable to find version of CDP to use for 150.0.7871.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.33.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Jul 24, 2026 10:09:20 PM org.junit.platform.launcher.core.DiscoveryIssueNotifier logIssues
+WARNING: TestEngine with ID 'cucumber' encountered a non-critical issue during test discovery:
+
+(1) [WARNING] The classpath resource selector 'features/web' should not be used to select features in a package. Use the package selector with 'features.web' instead
+]]></system-err>
+</testsuite>

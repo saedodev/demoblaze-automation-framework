@@ -2,20 +2,52 @@
 Feature: Login
 
   Background:
-    Given User membuka website DemoBlaze
+    Given User berada di halaman utama Demoblaze
 
-  Scenario: Login dengan akun valid
-    When User login menggunakan username "testuser" dan password "password123"
-    Then User berhasil login
+  @positive
+  Scenario: User berhasil login
+    When User membuka menu Log In
+    And User mengisi username yang valid
+    And User mengisi password yang valid
+    And User menekan tombol Log In
+    Then Nama user ditampilkan pada navigation bar
 
-  Scenario: Login dengan username kosong
-    When User login menggunakan username "" dan password "password123"
-    Then Muncul pesan error login
+  @negative
+  Scenario: Login menggunakan password yang salah
+    When User membuka menu Log In
+    And User mengisi username yang valid
+    And User mengisi password yang salah
+    And User menekan tombol Log In
+    Then Muncul alert Wrong password.
 
-  Scenario: Login dengan password kosong
-    When User login menggunakan username "testuser" dan password ""
-    Then Muncul pesan error login
+  @negative
+  Scenario: Login menggunakan username yang tidak terdaftar
+    When User membuka menu Log In
+    And User mengisi username yang tidak terdaftar
+    And User mengisi password yang valid
+    And User menekan tombol Log In
+    Then Muncul alert User does not exist.
 
-  Scenario: Login dengan akun tidak valid
-    When User login menggunakan username "invalid" dan password "invalid"
-    Then Muncul pesan error login
+  @negative
+  Scenario: Login tanpa username
+    When User membuka menu Log In
+    And User login tanpa username
+    And User mengisi password yang valid
+    And User menekan tombol Log In
+    Then Muncul alert Please fill out Username and Password. di menu login
+
+  @negative
+  Scenario: Login tanpa password
+    When User membuka menu Log In
+    And User mengisi username yang valid
+    And User login tanpa password
+    And User menekan tombol Log In
+    Then Muncul alert Please fill out Username and Password. di menu login
+
+  @negative
+  Scenario: Login tanpa username dan password
+    When User membuka menu Log In
+    And User login tanpa username
+    And User login tanpa password
+    And User menekan tombol Log In
+    Then Muncul alert Please fill out Username and Password. di menu login
