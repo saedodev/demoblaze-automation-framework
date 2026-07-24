@@ -1,11 +1,15 @@
 package com.saedodev.web.stepdef;
 
+import com.saedodev.web.driver.DriverFactory;
 import com.saedodev.web.hooks.TestData;
 import com.saedodev.web.pages.HomePage;
 import com.saedodev.web.pages.LoginPage;
+import com.saedodev.web.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,9 +21,15 @@ public class LoginStepDef {
 
     @When("User membuka menu Log In")
     public void loginMenu() {
+        WebDriver driver = DriverFactory.getDriver();
+
+        driver.get(ConfigReader.getBaseUrl());
+
+        System.out.println("URL      : " + driver.getCurrentUrl());
+        System.out.println("TITLE    : " + driver.getTitle());
+        System.out.println("LOGIN2   : " + driver.findElements(By.id("login2")).size());
 
         homePage.clickLogin();
-
     }
 
     @And("User mengisi username yang valid")
