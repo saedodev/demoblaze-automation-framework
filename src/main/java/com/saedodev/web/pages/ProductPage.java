@@ -83,15 +83,17 @@ public class ProductPage {
         }
 
         By product = By.xpath("//a[text()='" + productName + "']");
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        wait.until(ExpectedConditions.refreshed(
-                ExpectedConditions.visibilityOfElementLocated(product)));
-
-        wait.until(ExpectedConditions.refreshed(
-                ExpectedConditions.elementToBeClickable(product)));
-
-        driver.findElement(product).click();
+        int attempts = 0;
+        while (true) {
+            try {
+                wait.waitUntilClickable(product).click();
+                return;
+            } catch (org.openqa.selenium.StaleElementReferenceException e) {
+                attempts++;
+                if (attempts >= 3) {
+                    throw e;
+                }
+            }
+        }
     }
 }

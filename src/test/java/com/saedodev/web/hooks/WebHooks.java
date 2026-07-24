@@ -17,11 +17,18 @@ public class WebHooks {
     }
 
     @Before(value = "@login or @product or @cart or @checkout", order = 1)
-    public void prepareLoginUser() {
+    public void prepareRegisteredUser() {
 
         System.out.println("REGISTER USER");
 
         UserHelper.ensureRegistered();
+    }
+
+    @Before(value = "@product or @cart or @checkout", order = 2)
+    public void prepareLoggedInUser() {
+
+        System.out.println("AUTO LOGIN USER");
+
         UserHelper.login();
     }
 
