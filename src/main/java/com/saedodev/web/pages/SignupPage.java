@@ -10,44 +10,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPage {
+public class SignupPage {
     WebDriver driver = DriverFactory.getDriver();
     private WaitUtil wait = new WaitUtil(driver);
-    private final By signUsername = By.id("loginusername");
-    private final By signPassword = By.id("loginpassword");
-    private final By btnLogin     = By.xpath("//button[text()='Log in']");
-    private final By welcomeUser  = By.id("nameofuser");
+    private final By signUsername = By.id("sign-username");
+    private final By signPassword = By.id("sign-password");
+    private final By btnSignup    = By.xpath("//*[@id=\"signInModal\"]/div/div/div[3]/button[2]");
 
-    public void loginUsername(String username) {
+    public void registUsername(String username) {
         wait.waitUntilVisible(signUsername).sendKeys(username);
     }
 
-    public void loginPassword(String password) {
+    public void registPassword(String password) {
         wait.waitUntilVisible(signPassword).sendKeys(password);
     }
 
-    public void clickLogin() {
-        wait.waitUntilClickable(btnLogin).click();
-    }
-
-    public boolean isWelcomeUserDisplayed() {
-
-        return wait.waitUntilVisible(welcomeUser).isDisplayed();
-
-    }
-
-    public String getWelcomeUser() {
-
-        return wait.waitUntilVisible(welcomeUser).getText();
-
-    }
-
-    public void clearUsername() {
-        wait.waitUntilVisible(signUsername).clear();
-    }
-
-    public void clearPassword() {
-        wait.waitUntilVisible(signPassword).clear();
+    public void clickSignup() {
+        wait.waitUntilClickable(btnSignup).click();
     }
 
     public String getAlertMessage() {

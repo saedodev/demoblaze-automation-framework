@@ -10,7 +10,7 @@ Feature: Signup
     And User mengisi username baru
     And User mengisi password baru
     And User menekan tombol Sign Up
-    Then Muncul alert "Sign up successful."
+    Then Muncul alert Sign up successful.
 
   @negative
   Scenario: Signup menggunakan username yang sudah terdaftar
@@ -18,7 +18,7 @@ Feature: Signup
     And User mengisi username yang sudah terdaftar
     And User mengisi password
     And User menekan tombol Sign Up
-    Then Muncul alert "This user already exist."
+    Then Muncul alert This user already exist.
 
   @negative
   Scenario: Signup tanpa username
@@ -26,7 +26,7 @@ Feature: Signup
     And User mengosongkan username
     And User mengisi password
     And User menekan tombol Sign Up
-    Then Muncul alert "Please fill out Username and Password."
+    Then Muncul alert Please fill out Username and Password.
 
   @negative
   Scenario: Signup tanpa password
@@ -34,7 +34,7 @@ Feature: Signup
     And User mengisi username baru
     And User mengosongkan password
     And User menekan tombol Sign Up
-    Then Muncul alert "Please fill out Username and Password."
+    Then Muncul alert Please fill out Username and Password.
 
   @negative
   Scenario: Signup tanpa username dan password
@@ -42,4 +42,4 @@ Feature: Signup
     And User mengosongkan username
     And User mengosongkan password
     And User menekan tombol Sign Up
-    Then Muncul alert "Please fill out Username and Password."
+    Then Muncul alert Please fill out Username and Password.
