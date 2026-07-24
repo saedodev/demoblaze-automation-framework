@@ -14,11 +14,13 @@ public class CartPage {
     private WaitUtil wait = new WaitUtil(driver);
     public void deleteProduct(String productName) {
 
+        By product = By.xpath("//td[text()='" + productName + "']");
         By deleteButton = By.xpath(
                 "//td[text()='" + productName + "']/following-sibling::td/a"
         );
 
         wait.waitUntilClickable(deleteButton).click();
+        wait.waitUntilInvisible(product);
     }
 
     public boolean isProductRemoved(String productName) {
