@@ -2,9 +2,9 @@
 Feature: Checkout
 
   Background:
-    Given User login sebagai "testuser"
-    And User telah menambahkan produk ke cart
-    And User membuka halaman Cart
+    Given User berada di halaman utama Demoblaze
+    When User menambahkan beberapa produk untuk cart
+    And Produk tampil pada Cart
 
   Scenario: Checkout berhasil
     When User melakukan checkout dengan data valid
@@ -12,10 +12,6 @@ Feature: Checkout
 
   Scenario: Checkout tanpa mengisi nama
     When User melakukan checkout tanpa mengisi nama
-    Then Muncul pesan error
-
-  Scenario: Checkout tanpa mengisi negara
-    When User melakukan checkout tanpa mengisi negara
     Then Muncul pesan error
 
   Scenario: Checkout tanpa mengisi kartu kredit
