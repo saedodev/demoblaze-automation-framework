@@ -48,6 +48,7 @@ Feature: User API
   @negative
   Scenario: Update User dengan ID tidak valid
     When User mengirim request Update User dengan ID "61ab2c3d4e5f678901234567"
+#   gunakan status code 400 karena field body tidak sesuai
     Then Status code harus 400
     And Response menampilkan pesan error
 
